@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  TalkingBooghi
+
+  Created by Donghoon Shin on 2018. 8. 14..
+  Copyright © 2018년 Donghoon Shin. All rights reserved.
+*/
+
+"Edit" = "Edit";
+"Done" = "Done";
+"카드 앨범 만들기" = "New Album";
+"삭제" = "Delete";
+"확인" = "Ok";
+"저장" = "Save";
+" 삭제" = " delete";
+"취소" = "Cancel";
+"상징 추가하기" = "Add symbol";
+"카드 수정" = "Edit card";
+"카드 수정하기" = "Edit card";
+"카드 내보내기" = "Export card";
+"새로운 앨범" = "New album";
+"이 앨범의 이름을 입력하십시오" = "Input name of this album";
+"카드 이동" = "Move card";
+"해당 카드가 앱에서 삭제됩니다" = "Selected cards will be deleted";
+"이 사진을 삭제하시겠습니까?" = "Delete photo?";
+"카드 삭제" = "Delete card";
+"카드 만들기" = "Make card";
+"제목을 입력해주세요" = "Input name";
+"추가된 이미지가 없음" = "No image added";
+"적어도 하나의 사진을 추가하세요" = "Add at least one photo";
+"이미지를 추가해주세요" = "Add image";
+"웹 이미지 검색" = "Search web image";
+"제목" = "Title";
+"사진 촬영" = "Take photo";
+"라이브러리" = "Photo library";
+"AAC 상징검색" = "AAC symbol";
+"이름 입력" = "Input name";
+"이름 없음" = "No name";
+"고르는 중" = "Choosing";
+"모든 카드" = "Card";
+"앨범" = "Album";
+"백업" = "Backup";
+"앨범 삭제" = "Delete album";
+"수정할 제목" = "Name to modify";
+" 카테고리가 이미 존재함" = "already exists";
+" 이름을 가진 카테고리가 이미 존재합니다" = " category already exists in database";
+" 복사본" = " copy";
+"개의 카드를 어디로 이동할까요?" = " card(s) are moved to..";
+"백업을 시작할까요? 이 작업은 취소되지 않습니다" = "Backup info? This cannot be undone";
+"iOS TalkingBooghi 문의 메일" = "Question about iOS TalkingBooghi";
+"아래에 질문을 남겨주세요 \n ---------------------- \n" = "Write down questions below \n ---------------------- \n";
+"메일 전송 실패" = "Failed to send mail";
+"아이폰 이메일 설정을 확인하고 다시 시도해주세요" = "Please check if e-mail is correctly set";
+"다운로드를 시작할까요? 이 작업은 취소되지 않습니다" = "Download info? This cannot be undone";
+"다운로드" = "Download";
+"로그아웃 하시겠습니까?" = "Logout?";
+"장의 카드 삭제" = " cards delete";
+"이 사진을 삭제하시겠습니까, 아니면 이 앨범에서 제거하시겠습니까?" = "Delete this photo, or remove from album?";
+" 앨범 삭제" = " album delete";
+" 앨범 복사" = " copy";
+" 앨범을 삭제하시겠습니까? 카드는 제거되지 않습니다" = " delete? Cards won't be removed";
+" 앨범을 삭제하시겠습니까?" = " delete?";
+"카드 없음" = "No card";
+"카드를 사진첩에 저장했습니다" = "Card saved to library";
+"카드 이동" = "Move card";
+"장" = " card(s)";
+" 앨범 이름바꾸기" = " rename";
+"변경할 앨범 이름을 입력해주세요" = "Input new album name";
+" 이름을 가진 카테고리가 이미 존재합니다" = " already exists";
+"NavLogo" = "NavLogo_eng";
+"logo_launch" = "logo_launch_eng";
+"firstIntro" = "firstIntro_eng";
+"secondIntro" = "secondIntro_eng";
+"thirdIntro" = "thirdIntro_eng";

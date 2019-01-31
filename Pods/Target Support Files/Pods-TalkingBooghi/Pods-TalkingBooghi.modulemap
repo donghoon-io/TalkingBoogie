@@ -1,0 +1,6 @@
+framework module Pods_TalkingBooghi {
+  umbrella header "Pods-TalkingBooghi-umbrella.h"
+
+  export *
+  module * { export * }
+}

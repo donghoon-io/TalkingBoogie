@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "+"; ObjectID = "8bh-W3-sRG"; */
+"8bh-W3-sRG.text" = "+";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9z3-RU-Uel"; */
+"9z3-RU-Uel.text" = "Label";
+
+/* Class = "UILabel"; text = "  추천 단어"; ObjectID = "Ea3-7i-ds3"; */
+"Ea3-7i-ds3.text" = "  추천 단어";
+
+/* Class = "UILabel"; text = "N장의 카드"; ObjectID = "I8f-lR-Zwp"; */
+"I8f-lR-Zwp.text" = "N장의 카드";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JGQ-JR-7Pc"; */
+"JGQ-JR-7Pc.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M2B-k1-InN"; */
+"M2B-k1-InN.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "PSD-6n-vn0"; */
+"PSD-6n-vn0.normalTitle" = "×";
+
+/* Class = "UINavigationItem"; title = "모든 카드"; ObjectID = "R9o-3K-TZn"; */
+"R9o-3K-TZn.title" = "모든 카드";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Sp2-Dm-2cT"; */
+"Sp2-Dm-2cT.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Down"; ObjectID = "T00-T0-ZbS"; */
+"T00-T0-ZbS.normalTitle" = "Down";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "U7J-xn-Vb7"; */
+"U7J-xn-Vb7.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "배울 단어 추가하기"; ObjectID = "Ui2-1T-SJr"; */
+"Ui2-1T-SJr.text" = "배울 단어 추가하기";
+
+/* Class = "UILabel"; text = "카카오톡"; ObjectID = "V5J-S1-uNT"; */
+"V5J-S1-uNT.text" = "카카오톡";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VtG-Ju-2ha"; */
+"VtG-Ju-2ha.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Up"; ObjectID = "Xaw-u0-P27"; */
+"Xaw-u0-P27.normalTitle" = "Up";
+
+/* Class = "UINavigationItem"; title = "Talking Booghi"; ObjectID = "XiF-PW-bf9"; */
+"XiF-PW-bf9.title" = "Talking Booghi";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aOW-0X-TUg"; */
+"aOW-0X-TUg.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "b3w-3H-HXp"; */
+"b3w-3H-HXp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "상징 추가하기"; ObjectID = "bqo-sf-JUf"; */
+"bqo-sf-JUf.text" = "상징 추가하기";
+
+/* Class = "UILabel"; text = "새로운 카드 추가"; ObjectID = "pty-jf-jY7"; */
+"pty-jf-jY7.text" = "새로운 카드 추가";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qRU-HA-8C6"; */
+"qRU-HA-8C6.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "카드 수정하기"; ObjectID = "v75-3h-4Pt"; */
+"v75-3h-4Pt.title" = "카드 수정하기";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "w5C-XP-zdT"; */
+"w5C-XP-zdT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "x35-fA-WNv"; */
+"x35-fA-WNv.text" = "Label";

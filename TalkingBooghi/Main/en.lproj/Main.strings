@@ -1,0 +1,344 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "0Zl-U9-Qc2"; */
+"0Zl-U9-Qc2.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Every photo"; ObjectID = "1Rc-zu-XAU"; */
+"1Rc-zu-XAU.text" = "Every photo";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "1aM-kY-XNp"; */
+"1aM-kY-XNp.text" = "Add card";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "3Bg-B7-3oq"; */
+"3Bg-B7-3oq.normalTitle" = "Done";
+
+/* Class = "UINavigationItem"; title = "Change card order"; ObjectID = "44q-bJ-LUO"; */
+"44q-bJ-LUO.title" = "Change card order";
+
+/* Class = "UINavigationItem"; title = "Make card"; ObjectID = "4SU-5q-FAy"; */
+"4SU-5q-FAy.title" = "Make card";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "6a6-Cv-uCL"; */
+"6a6-Cv-uCL.text" = "Add card";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9Cq-gl-uEa"; */
+"9Cq-gl-uEa.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Make card"; ObjectID = "9oM-0D-txZ"; */
+"9oM-0D-txZ.title" = "Make card";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "A75-00-hxW"; */
+"A75-00-hxW.title" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "AOg-2J-O14"; */
+"AOg-2J-O14.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AzR-Lo-sd0"; */
+"AzR-Lo-sd0.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BUK-24-wcc"; */
+"BUK-24-wcc.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Choosing..."; ObjectID = "Bmz-MU-W0e"; */
+"Bmz-MU-W0e.placeholder" = "Choosing...";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "C0R-PN-K8K"; */
+"C0R-PN-K8K.text" = "Label";
+
+/* Class = "UILabel"; text = "Create card album"; ObjectID = "DO0-IK-Jkr"; */
+"DO0-IK-Jkr.text" = "Create card album";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "E5F-2A-a5D"; */
+"E5F-2A-a5D.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Up"; ObjectID = "Fbe-I5-r4b"; */
+"Fbe-I5-r4b.normalTitle" = "Up";
+
+/* Class = "UILabel"; text = "Logout"; ObjectID = "H2l-IF-b9I"; */
+"H2l-IF-b9I.text" = "Logout";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HQ4-OG-8Eq"; */
+"HQ4-OG-8Eq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Find password"; ObjectID = "I0g-KH-Go6"; */
+"I0g-KH-Go6.normalTitle" = "Find password";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "JFB-u4-zat"; */
+"JFB-u4-zat.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JU6-3L-2Hx"; */
+"JU6-3L-2Hx.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "JZi-RG-Dk6"; */
+"JZi-RG-Dk6.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KQ5-GL-D4E"; */
+"KQ5-GL-D4E.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Lmb-yM-sPS"; */
+"Lmb-yM-sPS.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Down"; ObjectID = "MAH-Lo-5KN"; */
+"MAH-Lo-5KN.normalTitle" = "Down";
+
+/* Class = "UISearchBar"; placeholder = "Input keyword"; ObjectID = "Mo4-y8-CRK"; */
+"Mo4-y8-CRK.placeholder" = "Input keyword";
+
+/* Class = "UINavigationItem"; title = "Arrange"; ObjectID = "N1T-dq-dYc"; */
+"N1T-dq-dYc.title" = "Arrange";
+
+/* Class = "UILabel"; text = "Recommendation"; ObjectID = "NL7-V1-LbZ"; */
+"NL7-V1-LbZ.text" = "Recommendation";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "Nq7-u6-aKk"; */
+"Nq7-u6-aKk.text" = "Add card";
+
+/* Class = "UINavigationItem"; title = "Change card order"; ObjectID = "Nxo-q4-G2z"; */
+"Nxo-q4-G2z.title" = "Change card order";
+
+/* Class = "UILabel"; text = "Voice speed"; ObjectID = "Oi5-tO-W7X"; */
+"Oi5-tO-W7X.text" = "Voice speed";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "PSD-6n-vn0"; */
+"PSD-6n-vn0.normalTitle" = "×";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "Qeh-NF-zzg"; */
+"Qeh-NF-zzg.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Move N cards to..."; ObjectID = "Qp5-T3-Ga7"; */
+"Qp5-T3-Ga7.text" = "Move N cards to...";
+
+/* Class = "UIBarButtonItem"; title = "Setting"; ObjectID = "RFA-jU-fZi"; */
+"RFA-jU-fZi.title" = "Setting";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RFU-Ah-9AX"; */
+"RFU-Ah-9AX.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Make card"; ObjectID = "SsX-3c-Ual"; */
+"SsX-3c-Ual.title" = "Make card";
+
+/* Class = "UIButton"; normalTitle = "Down"; ObjectID = "T00-T0-ZbS"; */
+"T00-T0-ZbS.normalTitle" = "Down";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Tcf-q9-zPa"; */
+"Tcf-q9-zPa.normalTitle" = "Done";
+
+/* Class = "UIViewController"; title = "Sign-up"; ObjectID = "UEu-ot-7ny"; */
+"UEu-ot-7ny.title" = "Sign-up";
+
+/* Class = "UILabel"; text = "Download"; ObjectID = "Uy9-Fg-GmR"; */
+"Uy9-Fg-GmR.text" = "Download";
+
+/* Class = "UINavigationItem"; title = "Move card"; ObjectID = "V2O-0F-sLi"; */
+"V2O-0F-sLi.title" = "Move card";
+
+/* Class = "UINavigationItem"; title = "Arrange"; ObjectID = "VrW-Pq-lZT"; */
+"VrW-Pq-lZT.title" = "Arrange";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VtG-Ju-2ha"; */
+"VtG-Ju-2ha.text" = "Label";
+
+/* Class = "UISearchBar"; placeholder = "Input keyword"; ObjectID = "W2j-ar-MwM"; */
+"W2j-ar-MwM.placeholder" = "Input keyword";
+
+/* Class = "UILabel"; text = "N cards"; ObjectID = "WLn-Mh-BEI"; */
+"WLn-Mh-BEI.text" = "N cards";
+
+/* Class = "UISearchBar"; placeholder = "Input keyword"; ObjectID = "WNr-vQ-bSY"; */
+"WNr-vQ-bSY.placeholder" = "Input keyword";
+
+/* Class = "UILabel"; text = "Input e-mail address"; ObjectID = "WQP-b2-kNj"; */
+"WQP-b2-kNj.text" = "Input e-mail address";
+
+/* Class = "UIButton"; normalTitle = "Up"; ObjectID = "Xaw-u0-P27"; */
+"Xaw-u0-P27.normalTitle" = "Up";
+
+/* Class = "UILabel"; text = "Send us your opinion!"; ObjectID = "Xd4-7h-9ee"; */
+"Xd4-7h-9ee.text" = "Send us your opinion!";
+
+/* Class = "UINavigationItem"; title = "Talking Booghi"; ObjectID = "XiF-PW-bf9"; */
+"XiF-PW-bf9.title" = "Talking Booghi";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Xku-Wr-igV"; */
+"Xku-Wr-igV.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "+ 18 cards"; ObjectID = "XtK-mD-Qii"; */
+"XtK-mD-Qii.text" = "+ 18 cards";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "YD8-7L-Se6"; */
+"YD8-7L-Se6.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YHr-CA-a4d"; */
+"YHr-CA-a4d.text" = "Label";
+
+/* Class = "UILabel"; text = "Move to new album"; ObjectID = "Zcb-oc-F67"; */
+"Zcb-oc-F67.text" = "Move to new album";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "aML-py-Pvi"; */
+"aML-py-Pvi.normalTitle" = "Start";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "aWc-QF-TkP"; */
+"aWc-QF-TkP.title" = "Setting";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b55-WT-ApM"; */
+"b55-WT-ApM.text" = "Label";
+
+/* Class = "UILabel"; text = "Every photo"; ObjectID = "bHJ-rV-X15"; */
+"bHJ-rV-X15.text" = "Every photo";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cD1-ex-leb"; */
+"cD1-ex-leb.text" = "Label";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "cHV-EJ-Fnl"; */
+"cHV-EJ-Fnl.text" = "Add card";
+
+/* Class = "UILabel"; text = "Choose card type"; ObjectID = "cfY-TD-RBv"; */
+"cfY-TD-RBv.text" = "Choose card type";
+
+/* Class = "UIBarButtonItem"; title = "Sign-up"; ObjectID = "cr8-34-YWU"; */
+"cr8-34-YWU.title" = "Sign-up";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "dLQ-Fw-ohR"; */
+"dLQ-Fw-ohR.placeholder" = "E-mail";
+
+/* Class = "UISearchBar"; placeholder = "Input keyword"; ObjectID = "dad-38-N4n"; */
+"dad-38-N4n.placeholder" = "Input keyword";
+
+/* Class = "UILabel"; text = "Cloud backup"; ObjectID = "eRA-aG-4Dg"; */
+"eRA-aG-4Dg.text" = "Cloud backup";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fgl-ZM-702"; */
+"fgl-ZM-702.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Change album order"; ObjectID = "fjH-ow-BAx"; */
+"fjH-ow-BAx.title" = "Change album order";
+
+/* Class = "UILabel"; text = "+ 18 cards"; ObjectID = "gOg-ea-7YO"; */
+"gOg-ea-7YO.text" = "+ 18 cards";
+
+/* Class = "UILabel"; text = "Create card album"; ObjectID = "iVU-zC-eKB"; */
+"iVU-zC-eKB.text" = "Create card album";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kCw-yU-iXt"; */
+"kCw-yU-iXt.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "kuX-nx-0ND"; */
+"kuX-nx-0ND.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "lQv-Lg-UPz"; */
+"lQv-Lg-UPz.text" = "Add card";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "lgY-zZ-nEA"; */
+"lgY-zZ-nEA.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lkD-C1-k9Y"; */
+"lkD-C1-k9Y.text" = "Label";
+
+/* Class = "UILabel"; text = "Upload"; ObjectID = "ltu-gf-IYL"; */
+"ltu-gf-IYL.text" = "Upload";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "m7K-ry-72s"; */
+"m7K-ry-72s.text" = "Label";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "mSh-wF-sjB"; */
+"mSh-wF-sjB.text" = "Add card";
+
+/* Class = "UILabel"; text = "Create card album"; ObjectID = "mU2-0q-AHL"; */
+"mU2-0q-AHL.text" = "Create card album";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "mUn-MT-pXi"; */
+"mUn-MT-pXi.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "mWR-Fn-t8z"; */
+"mWR-Fn-t8z.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mdW-Uq-aKs"; */
+"mdW-Uq-aKs.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "mlC-WL-0Id"; */
+"mlC-WL-0Id.placeholder" = "Password";
+
+/* Class = "UISearchBar"; placeholder = "Input keyword"; ObjectID = "n5v-jd-GTc"; */
+"n5v-jd-GTc.placeholder" = "Input keyword";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "njb-v9-iGl"; */
+"njb-v9-iGl.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Add symbol"; ObjectID = "oLj-Dp-E3q"; */
+"oLj-Dp-E3q.text" = "Add symbol";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oQF-D5-4Pc"; */
+"oQF-D5-4Pc.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ode-J6-ybj"; */
+"ode-J6-ybj.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pqp-CO-2JB"; */
+"pqp-CO-2JB.text" = "Label";
+
+/* Class = "UILabel"; text = "Make card"; ObjectID = "pty-jf-jY7"; */
+"pty-jf-jY7.text" = "Make card";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "qLK-ln-IXq"; */
+"qLK-ln-IXq.title" = "Done";
+
+/* Class = "UILabel"; text = "I have read and agree to the terms of use"; ObjectID = "qLe-TG-lDK"; */
+"qLe-TG-lDK.text" = "I have read and agree to the terms of use";
+
+/* Class = "UILabel"; text = "Add card"; ObjectID = "rSV-W0-H9o"; */
+"rSV-W0-H9o.text" = "Add card";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "rvR-hE-VVB"; */
+"rvR-hE-VVB.normalTitle" = "×";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "skU-aq-EYA"; */
+"skU-aq-EYA.normalTitle" = "Sign up";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "t5c-nw-zDX"; */
+"t5c-nw-zDX.placeholder" = "E-mail";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "tTt-vE-92T"; */
+"tTt-vE-92T.title" = "Search";
+
+/* Class = "UILabel"; text = "Add symbol"; ObjectID = "tvu-MV-jJ7"; */
+"tvu-MV-jJ7.text" = "Add symbol";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uOg-Na-dqo"; */
+"uOg-Na-dqo.text" = "Label";
+
+/* Class = "UILabel"; text = "+ 18 cards"; ObjectID = "vaF-qO-iIR"; */
+"vaF-qO-iIR.text" = "+ 18 cards";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "vcZ-1u-Tpk"; */
+"vcZ-1u-Tpk.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "w5C-XP-zdT"; */
+"w5C-XP-zdT.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Down"; ObjectID = "wXZ-QY-1yY"; */
+"wXZ-QY-1yY.normalTitle" = "Down";
+
+/* Class = "UILabel"; text = "Add symbol"; ObjectID = "wzH-gi-8Ai"; */
+"wzH-gi-8Ai.text" = "Add symbol";
+
+/* Class = "UIViewController"; title = "Password reset"; ObjectID = "xQG-Yo-wZg"; */
+"xQG-Yo-wZg.title" = "Password reset";
+
+/* Class = "UIButton"; normalTitle = "Up"; ObjectID = "xTT-mV-hKm"; */
+"xTT-mV-hKm.normalTitle" = "Up";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "xXe-cP-F0I"; */
+"xXe-cP-F0I.placeholder" = "E-mail";
+
+/* Class = "UINavigationItem"; title = "Arrange"; ObjectID = "xYL-T7-82M"; */
+"xYL-T7-82M.title" = "Arrange";
+
+/* Class = "UITextField"; placeholder = "Password again"; ObjectID = "ybU-OZ-jCx"; */
+"ybU-OZ-jCx.placeholder" = "Password again";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zFk-Zu-k1n"; */
+"zFk-Zu-k1n.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "zMw-Hh-jQT"; */
+"zMw-Hh-jQT.normalTitle" = "×";
+
+"CFBundleDisplayName" = "TalkingBooghi";

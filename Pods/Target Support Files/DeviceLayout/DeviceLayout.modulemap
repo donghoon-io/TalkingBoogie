@@ -1,0 +1,6 @@
+framework module DeviceLayout {
+  umbrella header "DeviceLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}
