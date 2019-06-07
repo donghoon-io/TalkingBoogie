@@ -25,7 +25,7 @@ class ChooseRoutineAddedViewCell: UICollectionViewCell, UITextFieldDelegate {
         didSet {
             addedTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
             addedTextField.delegate = self
-            addedTextField.attributedPlaceholder = NSAttributedString(string: "고르는 중".localized(),
+            addedTextField.attributedPlaceholder = NSAttributedString(string: "이름".localized(),
                                                         attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         }
     }

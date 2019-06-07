@@ -99,7 +99,7 @@ class ChooseImageViewController: UIViewController, UICollectionViewDelegate, UIC
                     self.selectedImages.append(img)
                     self.selectedImageNames.append("이름 입력".localized())
                     self.setBeforeLoad()
-                    self.detectLabels(image: img, index: self.selectedImages.count - 1)
+                    
                 }
             }
         }
@@ -417,8 +417,7 @@ class ChooseImageViewController: UIViewController, UICollectionViewDelegate, UIC
             break
         }
     }
-    lazy var vision = Vision.vision()
-    func detectLabels(image: UIImage?, index: Int) {
+    /*func detectLabels(image: UIImage?, index: Int) {
         let options = VisionLabelDetectorOptions(confidenceThreshold: 0.5)
         let labelDetector = vision.labelDetector(options: options)
         let imageConverted = VisionImage(image: image ?? UIImage())
@@ -447,7 +446,7 @@ class ChooseImageViewController: UIViewController, UICollectionViewDelegate, UIC
                 self.setBeforeLoad()
             }
         }
-    }
+    }*/
 }
 
 func getImageFromAsset(asset:PHAsset, imageSize:CGSize, callback:@escaping (_ result:UIImage) -> Void) -> Void {

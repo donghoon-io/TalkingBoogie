@@ -2,39 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
-	<string>ca-app-pub-3940256099942544/2934735716</string>
-	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
-	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>592125610761-jhfmqfg7uceqehtj2gjhffhgju26re7c.apps.googleusercontent.com</string>
+	<string>840848910203-hsb5f55p3rd8jt5ajovc3q4p9641o0qm.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.592125610761-jhfmqfg7uceqehtj2gjhffhgju26re7c</string>
+	<string>com.googleusercontent.apps.840848910203-hsb5f55p3rd8jt5ajovc3q4p9641o0qm</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA0mwUvUpbsxTp3iWV85g-1sfZiVVQSsec</string>
+	<string>AIzaSyDD3GWKvIo-mvZ2_YyQGVeX-I37P_ad7VM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>592125610761</string>
+	<string>840848910203</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>snu.isc.TalkingBooghi</string>
+	<string>snu.ece.TalkingBooghi-manager</string>
 	<key>PROJECT_ID</key>
-	<string>talkingbooghi</string>
+	<string>talkingbooghi-chi</string>
 	<key>STORAGE_BUCKET</key>
-	<string>talkingbooghi.appspot.com</string>
+	<string>talkingbooghi-chi.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
 	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:592125610761:ios:1ae11232e9cb7ecd</string>
+	<string>1:840848910203:ios:b33bbbe28a05555d</string>
 	<key>DATABASE_URL</key>
-	<string>https://talkingbooghi.firebaseio.com</string>
+	<string>https://talkingbooghi-chi.firebaseio.com</string>
 </dict>
 </plist>

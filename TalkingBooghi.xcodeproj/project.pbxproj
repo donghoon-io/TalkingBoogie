@@ -17,8 +17,6 @@
 		261A01662148158300406B9C /* EverySortViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A01652148158300406B9C /* EverySortViewCell.swift */; };
 		261CE082212DC259008085BF /* DataSavingStrucrute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CE081212DC259008085BF /* DataSavingStrucrute.swift */; };
 		261CE084212DF8F2008085BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CE083212DF8F2008085BF /* SignUpViewController.swift */; };
-		261CE0A6212F2041008085BF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261CE0A4212F2041008085BF /* SWRevealViewController.m */; };
-		26228715210ACAB80053EA32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26228714210ACAB80053EA32 /* GoogleService-Info.plist */; };
 		26228717210C5DE30053EA32 /* SaveImageStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26228716210C5DE30053EA32 /* SaveImageStructure.swift */; };
 		2622873C210E3D690053EA32 /* DragDropViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622873B210E3D690053EA32 /* DragDropViewCell.swift */; };
 		2622874021100AC40053EA32 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622873F21100AC40053EA32 /* KeyboardLayoutConstraint.swift */; };
@@ -28,7 +26,6 @@
 		263391422157E971001244EF /* AACFileNameSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263391412157E971001244EF /* AACFileNameSet.swift */; };
 		2642744821A91BD6001A3653 /* AlbumMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642744721A91BD6001A3653 /* AlbumMoveViewController.swift */; };
 		2642744A21A91BF4001A3653 /* AlbumMoveViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642744921A91BF4001A3653 /* AlbumMoveViewCell.swift */; };
-		2642F6D821FD9F2100D3A85A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2642F6D721FD9F2100D3A85A /* Info.plist */; };
 		2643AACD21A930C30053E8C1 /* AlbumDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643AACC21A930C30053E8C1 /* AlbumDeleteViewController.swift */; };
 		2643AACF21A9397C0053E8C1 /* AlbumDeleteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643AACE21A9397C0053E8C1 /* AlbumDeleteViewCell.swift */; };
 		264986E721009D8D00D594E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264986E621009D8D00D594E9 /* AppDelegate.swift */; };
@@ -41,6 +38,7 @@
 		26536849210316CF00FED207 /* ItemsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26536848210316CF00FED207 /* ItemsViewCell.swift */; };
 		2653684B21039A0A00FED207 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653684A21039A0A00FED207 /* ImageViewController.swift */; };
 		265388922170657000FC437B /* AzureTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265388912170657000FC437B /* AzureTranslator.swift */; };
+		266A94012267590700011140 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 266A94002267590700011140 /* GoogleService-Info.plist */; };
 		267A8921214EA9DD00C45AB9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A8920214EA9DD00C45AB9 /* SearchViewController.swift */; };
 		267A8943214F549D00C45AB9 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A8942214F549D00C45AB9 /* SearchViewCell.swift */; };
 		268126842121E7C700DB4AE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 268126862121E7C700DB4AE0 /* Localizable.strings */; };
@@ -98,6 +96,7 @@
 		26FAB822211ECE5A00D06FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FAB821211ECE5900D06FC5 /* Assets.xcassets */; };
 		26FB5A8B212C37AF001DC7BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB5A8A212C37AF001DC7BD /* LoginViewController.swift */; };
 		B815FC3BF83EB95B961A24FB /* Pods_TalkingBooghi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF73152087912CFEA50C4953 /* Pods_TalkingBooghi.framework */; };
+		F1D5E26822A3FC2500DAA49D /* SearchAACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5E26722A3FC2500DAA49D /* SearchAACViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,10 +110,6 @@
 		261A01652148158300406B9C /* EverySortViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverySortViewCell.swift; sourceTree = "<group>"; };
 		261CE081212DC259008085BF /* DataSavingStrucrute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSavingStrucrute.swift; sourceTree = "<group>"; };
 		261CE083212DF8F2008085BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		261CE0A3212F203F008085BF /* TalkingBooghi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalkingBooghi-Bridging-Header.h"; sourceTree = "<group>"; };
-		261CE0A4212F2041008085BF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		261CE0A5212F2041008085BF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		26228714210ACAB80053EA32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26228716210C5DE30053EA32 /* SaveImageStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageStructure.swift; sourceTree = "<group>"; };
 		2622873B210E3D690053EA32 /* DragDropViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropViewCell.swift; sourceTree = "<group>"; };
 		2622873F21100AC40053EA32 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
@@ -141,6 +136,7 @@
 		26536848210316CF00FED207 /* ItemsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewCell.swift; sourceTree = "<group>"; };
 		2653684A21039A0A00FED207 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		265388912170657000FC437B /* AzureTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureTranslator.swift; sourceTree = "<group>"; };
+		266A94002267590700011140 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		267A8920214EA9DD00C45AB9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		267A8942214F549D00C45AB9 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		268126812121E79200DB4AE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
@@ -201,6 +197,7 @@
 		26FB5A8A212C37AF001DC7BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36EDDD5D22D45F34E67CAFB1 /* Pods-TalkingBooghi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkingBooghi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalkingBooghi/Pods-TalkingBooghi.debug.xcconfig"; sourceTree = "<group>"; };
 		CF73152087912CFEA50C4953 /* Pods_TalkingBooghi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkingBooghi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D5E26722A3FC2500DAA49D /* SearchAACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAACViewController.swift; sourceTree = "<group>"; };
 		F7D1EDE4ED76072E788570A3 /* Pods-TalkingBooghi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkingBooghi.release.xcconfig"; path = "Pods/Target Support Files/Pods-TalkingBooghi/Pods-TalkingBooghi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,16 +234,6 @@
 				268E75F2216DF9DA00515EFC /* EveryMoveViewCell.swift */,
 			);
 			path = Sort;
-			sourceTree = "<group>";
-		};
-		261CE085212E18B6008085BF /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				261CE0A5212F2041008085BF /* SWRevealViewController.h */,
-				261CE0A4212F2041008085BF /* SWRevealViewController.m */,
-				261CE0A3212F203F008085BF /* TalkingBooghi-Bridging-Header.h */,
-			);
-			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		261CE093212F1B49008085BF /* Main */ = {
@@ -301,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				2622873F21100AC40053EA32 /* KeyboardLayoutConstraint.swift */,
-				261CE085212E18B6008085BF /* SWRevealViewController */,
 				26FAB81A211D43FE00D06FC5 /* UPCarouselFlowLayout */,
 				26EF89BA213D382D0029BB03 /* ColumnFlowLayout.swift */,
 			);
@@ -347,6 +333,7 @@
 				267A8942214F549D00C45AB9 /* SearchViewCell.swift */,
 				2685A752214BDE440064A704 /* CardSelectionViewController.swift */,
 				267A8920214EA9DD00C45AB9 /* SearchViewController.swift */,
+				F1D5E26722A3FC2500DAA49D /* SearchAACViewController.swift */,
 				26A649022150123000C90A57 /* ChooseImageViewController.swift */,
 				26A649062150BFC700C90A57 /* ChooseAACViewCell.swift */,
 				26A649082150BFE700C90A57 /* ChooseWebViewCell.swift */,
@@ -420,8 +407,8 @@
 				261CE096212F1C29008085BF /* Fonts */,
 				261CE094212F1B8D008085BF /* Login */,
 				261CE09B212F1CDF008085BF /* AddWord */,
-				26228714210ACAB80053EA32 /* GoogleService-Info.plist */,
 				2642F6D721FD9F2100D3A85A /* Info.plist */,
+				266A94002267590700011140 /* GoogleService-Info.plist */,
 				268126862121E7C700DB4AE0 /* Localizable.strings */,
 				26FAB821211ECE5900D06FC5 /* Assets.xcassets */,
 			);
@@ -556,18 +543,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				266A94012267590700011140 /* GoogleService-Info.plist in Resources */,
 				264986F121009D8D00D594E9 /* LaunchScreen.storyboard in Resources */,
 				268FAB9C215366CF0086D347 /* NanumSquareRound-EB.ttf in Resources */,
 				268126842121E7C700DB4AE0 /* Localizable.strings in Resources */,
 				268FAB9B215366CC0086D347 /* NanumSquareRound-B.ttf in Resources */,
 				26FAB820211D443A00D06FC5 /* Main.storyboard in Resources */,
-				2642F6D821FD9F2100D3A85A /* Info.plist in Resources */,
 				26DEBAD7219B025D0072C9F7 /* Export.storyboard in Resources */,
 				268FAB9E215366D50086D347 /* NanumSquareRound-R.ttf in Resources */,
 				26CC534F22003D4F00B73C13 /* RixGulim-B.ttf in Resources */,
 				268FAB9D215366D20086D347 /* NanumSquareRound-L.ttf in Resources */,
 				26C037F0215369BD00866FD2 /* RixGulim-L.ttf in Resources */,
-				26228715210ACAB80053EA32 /* GoogleService-Info.plist in Resources */,
 				26FAB822211ECE5A00D06FC5 /* Assets.xcassets in Resources */,
 				26C037EF215369BD00866FD2 /* RixGulim-EB.ttf in Resources */,
 			);
@@ -585,11 +571,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TalkingBooghi/Pods-TalkingBooghi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/DeviceLayout/DeviceLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KMNavigationBarTransition/KMNavigationBarTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/KRPullLoader/KRPullLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
@@ -603,6 +590,8 @@
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
@@ -611,11 +600,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BetterSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNavigationBarTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRPullLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
@@ -629,6 +619,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -701,10 +693,10 @@
 				267A8943214F549D00C45AB9 /* SearchViewCell.swift in Sources */,
 				26D55D0D2137C0570012EF9D /* ImageViewCell_1.swift in Sources */,
 				26C301D62163D3E4002F5A05 /* ChooseRoutineDefaultViewCell.swift in Sources */,
+				F1D5E26822A3FC2500DAA49D /* SearchAACViewController.swift in Sources */,
 				265388922170657000FC437B /* AzureTranslator.swift in Sources */,
 				26A649092150BFE700C90A57 /* ChooseWebViewCell.swift in Sources */,
 				26E7C58D21405938001C445B /* ImageViewCell_routine1.swift in Sources */,
-				261CE0A6212F2041008085BF /* SWRevealViewController.m in Sources */,
 				26A6490B21510E1400C90A57 /* ChooseRoutineImageViewController.swift in Sources */,
 				26DEBB03219FDE5D0072C9F7 /* ExportRoutineViewController.swift in Sources */,
 				260CF36E21902814005D661B /* SuggestionViewCell.swift in Sources */,
@@ -900,7 +892,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = snu.isc.TalkingBooghi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "TalkingBooghi/Addon/SWRevealViewController/TalkingBooghi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -923,7 +915,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = snu.isc.TalkingBooghi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "TalkingBooghi/Addon/SWRevealViewController/TalkingBooghi-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

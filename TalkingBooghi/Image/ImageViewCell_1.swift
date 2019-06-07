@@ -54,8 +54,10 @@ class ImageViewCell_1: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage1.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel1.textColor = .black
+                    self.tagImage1.layer.borderWidth = 2
+                    self.tagImage1.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         } else {
@@ -67,8 +69,10 @@ class ImageViewCell_1: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage1.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel1.textColor = .black
+                    self.tagImage1.layer.borderWidth = 2
+                    self.tagImage1.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         }

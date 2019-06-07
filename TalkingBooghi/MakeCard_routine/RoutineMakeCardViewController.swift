@@ -62,7 +62,7 @@ class RoutineMakeCardViewController: UIViewController, UICollectionViewDelegate,
                     temp = ImageSet(category: self.whatIsTitleText!, imageName: textField.text!, imagePath: imgPath, tagName: imageNames, tagPath: tagPaths, cardType: "routine", isEditable: true)
                 }
                 imageSets.insert(temp!, at: 0)
-                saveDocumentImage(img: sortedImageGenerator(imgSet: temp!), imgPath: imgPath+"main")
+                saveDocumentImage(img: routineImageGenerator(imgSet: temp!), imgPath: imgPath+"main")
                 self.dismiss(animated: true, completion: nil)
             }
         } else {
@@ -102,7 +102,7 @@ class RoutineMakeCardViewController: UIViewController, UICollectionViewDelegate,
                     temp = ImageSet(category: self.whatIsTitleText!, imageName: textField.text!, imagePath: imgPath, tagName: imageNames, tagPath: tagPaths, cardType: "routine", isEditable: true)
                 }
                 imageSets.insert(temp!, at: index)
-                saveDocumentImage(img: sortedImageGenerator(imgSet: temp!), imgPath: imgPath+"main")
+                saveDocumentImage(img: routineImageGenerator(imgSet: temp!), imgPath: imgPath+"main")
                 self.dismiss(animated: true, completion: nil)
             }
         }

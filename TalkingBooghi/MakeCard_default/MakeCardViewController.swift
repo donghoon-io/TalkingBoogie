@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import Localize_Swift
 
-class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImageProtocol, PassAACBack {
+class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImageProtocol, SendAACProtocol, PassAACBack {
     
     var prepareForAAC = false
     
@@ -30,7 +30,7 @@ class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImagePr
     
     func sendImage(image: UIImage) {
         addedImage.image = image
-        detectLabels(image: image, txtField: textField)
+        //detectLabels(image: image, txtField: textField)
     }
     
     @IBOutlet weak var addedImage: UIImageView! {
@@ -66,7 +66,6 @@ class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImagePr
     
     var imageSource: UIImage?
     
-    lazy var vision = Vision.vision()
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         cancelClicked.isEnabled = false
@@ -139,6 +138,9 @@ class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImagePr
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         let selectAlert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+        let aacAction: UIAlertAction = UIAlertAction(title: "AAC 상징 추가", style: .default) { (action) in
+            self.performSegue(withIdentifier: "goAACadd", sender: self)
+        }
         let webImageAction: UIAlertAction = UIAlertAction(title: "웹 이미지 검색".localized(), style: .default) { (action) in
             self.performSegue(withIdentifier: "goSearch", sender: self)
         }
@@ -149,6 +151,7 @@ class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImagePr
             self.openLibrary()
         }
         let cancelAction: UIAlertAction = UIAlertAction(title: "취소".localized(), style: .cancel, handler: nil)
+        selectAlert.addAction(aacAction)
         selectAlert.addAction(webImageAction)
         selectAlert.addAction(takePicAction)
         selectAlert.addAction(libraryAction)
@@ -276,10 +279,13 @@ class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImagePr
             aacAddController.aacDelegate = self
             aacAddController.selectedImages = self.tagImages
             aacAddController.selectedImageNames = self.tagNames
+        } else if segue.identifier == "goAACadd" {
+            let addAACController = segue.destination as! SearchAACViewController
+            addAACController.imageDelegate = self
         }
     }
     
-    func detectLabels(image: UIImage?, txtField: UITextField) {
+    /*func detectLabels(image: UIImage?, txtField: UITextField) {
         let options = VisionLabelDetectorOptions(confidenceThreshold: 0.5)
         let labelDetector = vision.labelDetector(options: options)
         let imageConverted = VisionImage(image: image ?? UIImage())
@@ -292,7 +298,7 @@ class MakeCardViewController: UIViewController, UITextFieldDelegate, SendImagePr
 //                txtField.text = features[0].label
             }
         }
-    }
+    }*/
     
     func openLibrary() {
         picker.sourceType = .photoLibrary
@@ -373,7 +379,7 @@ extension MakeCardViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             addedImage.image = image
-            detectLabels(image: image, txtField: textField)
+            //detectLabels(image: image, txtField: textField)
         }
         dismiss(animated: true, completion: nil)
     }

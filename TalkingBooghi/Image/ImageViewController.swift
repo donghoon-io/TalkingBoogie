@@ -10,8 +10,15 @@ import UIKit
 import AVFoundation
 import Toast_Swift
 import Localize_Swift
+import Firebase
 
 class ImageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let dateFormatter1: DateFormatter = DateFormatter()
+    let dateFormatter2: DateFormatter = DateFormatter()
+    let dateFormatter3: DateFormatter = DateFormatter()
+    
+    var db = Firestore.firestore()
     
     var synth: AVSpeechSynthesizer?
     
@@ -44,6 +51,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
             if nowIndex!.item != 0 {
                 let indexToScrollTo = IndexPath(item: nowIndex!.item - 1, section: 0)
                 self.scrollCollectionView.scrollToItem(at: indexToScrollTo, at: .centeredHorizontally, animated: true)
+                sendLog()
             }
         }
     }
@@ -54,6 +62,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
             if nowIndex!.item != setCategoryArray(Array: imageSets, CategoryName: whatIsCategory).count - 1 {
                 let indexToScrollTo = IndexPath(item: nowIndex!.item + 1, section: 0)
                 self.scrollCollectionView.scrollToItem(at: indexToScrollTo, at: .centeredHorizontally, animated: true)
+                sendLog()
             }
         }
     }
@@ -66,6 +75,38 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
     var timer = Timer()
     
     var onceOnly = false
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        sendLog()
+    }
+    
+    func sendLog() {
+        let centerItem: IndexPath = (self.scrollCollectionView.indexPathForItem(at: CGPoint(x: self.scrollCollectionView.center.x + self.scrollCollectionView.contentOffset.x, y: self.scrollCollectionView.center.y + self.scrollCollectionView.contentOffset.y)))!
+        let tempCard = setCategoryArray(Array: imageSets, CategoryName: whatIsCategory)[centerItem.item]
+        
+        db = Firestore.firestore()
+        
+        let dateComponents = Calendar.current.dateComponents([.weekOfYear, .month], from: Date())
+        
+        
+        
+        db.collection("\(experimentID)_usage").addDocument(data: [
+            "cardname": tempCard.imageName,
+            "cardtype": tempCard.cardType,
+            "carddata": tempCard.tagName,
+            "date": dateFormatter1.string(from: Date()),
+            "time": dateFormatter2.string(from: Date()),
+            "weekofyear": String(dateComponents.weekOfYear ?? 0),
+            "month": String(dateComponents.month ?? 0),
+            "totrecord": dateFormatter3.string(from: Date())
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: documentID")
+            }
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return setCategoryArray(Array: imageSets, CategoryName: whatIsCategory).count
@@ -170,7 +211,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
             for item in setCategoryArray(Array: imageSets, CategoryName: whatIsCategory)[indexPath.item].tagPath {
                 imageArray.append(loadImage(named: item))
             }
-            for _ in numberOfTags ..< 10 {
+            for _ in numberOfTags ..< 12 {
                 nameArray.append(" ")
                 imageArray.append(UIImage(named: "add")!)
             }
@@ -600,6 +641,10 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter1.dateFormat = "yyyy-MM-dd"
+        dateFormatter2.dateFormat = "HH:mm:ss"
+        dateFormatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let layout = UPCarouselFlowLayout()
         switch UIDevice.current.screenResolutionType {

@@ -5,7 +5,7 @@
 //  Created by Donghoon Shin on 23/08/2018.
 //  Copyright © 2018 Donghoon Shin. All rights reserved.
 //
-
+/*
 import Foundation
 import Firebase
 import FirebaseDatabase
@@ -108,3 +108,4 @@ func loadImageSets(userid: String) -> Void {
         imageSets = imgSet
     }
 }
+*/

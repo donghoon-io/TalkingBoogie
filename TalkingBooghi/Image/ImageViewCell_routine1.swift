@@ -11,7 +11,11 @@ import UIKit
 class ImageViewCell_routine1: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var innerRoutineCollectionView: UICollectionView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UITextView! {
+        didSet {
+            titleLabel.centerVertically()
+        }
+    }
     
     @IBOutlet weak var sizeLabel: UILabel! {
         didSet {
@@ -76,3 +80,14 @@ class ImageViewCell_routine1: UICollectionViewCell, UICollectionViewDelegate, UI
         return cell
     }
 }
+
+extension UITextView {
+    func centerVertically() {
+        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let size = sizeThatFits(fittingSize)
+        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
+        let positiveTopOffset = max(1, topOffset)
+        contentOffset.y = -positiveTopOffset
+    }
+}
+

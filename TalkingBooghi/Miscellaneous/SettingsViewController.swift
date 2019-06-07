@@ -16,21 +16,6 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     var sendingType = String()
     
-    @IBAction func backUpClicked(_ sender: UIButton) {
-        sendingType = "backUp"
-        let confirmController: UIAlertController = UIAlertController(title: "백업을 시작할까요? 이 작업은 취소되지 않습니다".localized(), message: nil, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "취소".localized(), style: .destructive, handler: nil)
-        let confirmAction: UIAlertAction = UIAlertAction(title: "백업".localized(), style: .default) {
-            (action: UIAlertAction!) -> Void in
-            saveImagesToFirebase(userid: (Auth.auth().currentUser?.uid)!)
-
-        }
-        confirmController.addAction(cancelAction)
-        confirmController.addAction(confirmAction)
-        
-        self.present(confirmController, animated: true, completion: nil)
-    }
-    
     @IBAction func sendFeedback(_ sender: UIButton) {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
@@ -67,22 +52,6 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         controller.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func backDownClicked(_ sender: UIButton) {
-        sendingType = "backDown"
-        let confirmController: UIAlertController = UIAlertController(title: "다운로드를 시작할까요? 이 작업은 취소되지 않습니다".localized(), message: nil, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "취소".localized(), style: .destructive, handler: nil)
-        let confirmAction: UIAlertAction = UIAlertAction(title: "다운로드".localized(), style: .default) {
-            (action: UIAlertAction!) -> Void in
-            loadImageSets(userid: (Auth.auth().currentUser?.uid)!)
-            loadURLsToBeDownloaded(userid: (Auth.auth().currentUser?.uid)!) { urls in
-                loadImagesFromFirebase(userid: (Auth.auth().currentUser?.uid)!, downloadListURL: urls)
-            }
-        }
-        confirmController.addAction(cancelAction)
-        confirmController.addAction(confirmAction)
-        
-        self.present(confirmController, animated: true, completion: nil)
-    }
     @IBAction func logoutClicked(_ sender: UIButton) {
         let logoutAlert: UIAlertController = UIAlertController(title: "로그아웃 하시겠습니까?".localized(), message: nil, preferredStyle: .alert)
         let okAction: UIAlertAction = UIAlertAction(title: "확인".localized(), style: .default) { alert in
@@ -132,11 +101,26 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
     }
     
+    @IBOutlet weak var givenID: UITextField! {
+        didSet {
+            givenID.text = experimentID == "" ? "" : experimentID
+        }
+    }
+    @IBOutlet weak var confirmButton: UIButton! {
+        didSet {
+            confirmButton.layer.cornerRadius = confirmButton.bounds.height / 2
+        }
+    }
+    @IBAction func confirmClicked(_ sender: UIButton) {
+        experimentID = givenID.text ?? ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.navigationBar.tintColor = UIColor.black
+        
     }
 }

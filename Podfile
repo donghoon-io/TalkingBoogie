@@ -8,10 +8,8 @@ target 'TalkingBooghi' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-  pod 'Firebase/MLVision'
-  pod 'Firebase/MLVisionLabelModel'
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
   pod 'M13Checkbox'
   pod 'TextFieldEffects'
   pod 'Sparrow/LaunchAnimation', :git => 'https://github.com/IvanVorobei/Sparrow.git'

@@ -8,8 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
-import FirebaseStorage
 import Sparrow
 import BetterSegmentedControl
 import RevealingSplashView
@@ -155,7 +153,16 @@ extension ViewController: CategoryCellDelegate {
     }
 }
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, goToMakeCard {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, goToMakeCard {
+    
+    var db: Firestore!
+    
+    let dateFormatter1: DateFormatter = DateFormatter()
+    let dateFormatter2: DateFormatter = DateFormatter()
+    let dateFormatter3: DateFormatter = DateFormatter()
+    
+    var offset = CGPoint.zero
+    
     func goMake(titleName: String, type: String) {
         let titleNameForMakingCard = titleName
         switch type {
@@ -188,11 +195,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func mainSegmentedControlValueChanged(_ sender: BetterSegmentedControl) {
         switch sender.index {
         case 0:
-            self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+            self.everyCollectionView.isHidden = false
+            self.categoryCollectionView.isHidden = true
+            
             isAlbum = false
             cardLayout()
         default:
-            self.scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
+            self.everyCollectionView.isHidden = true
+            self.categoryCollectionView.isHidden = false
+            
             isAlbum = true
             albumLayout()
         }
@@ -246,13 +257,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.performSegue(withIdentifier: "moveCategory", sender: self)
         } else {
             self.performSegue(withIdentifier: "moveCard", sender: self)
-        }
-    }
-    
-    
-    @IBOutlet weak var scrollView: UIScrollView! {
-        didSet {
-            scrollView.isDirectionalLockEnabled = true
         }
     }
     @IBOutlet weak var categoryCollectionView: UICollectionView!
@@ -375,15 +379,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        db = Firestore.firestore()
+        
+        dateFormatter1.dateFormat = "yyyy-MM-dd"
+        dateFormatter2.dateFormat = "HH:mm:ss"
+        dateFormatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
         setupViews()
         
-        self.scrollView.contentSize = CGSize(width: self.view.frame.width * 2, height: self.scrollView.bounds.height)
-        
-        self.everyCollectionView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.scrollView.frame.height)
-        self.categoryCollectionView.frame = CGRect(x: self.view.frame.width, y: 0, width: self.view.frame.width, height: self.scrollView.frame.height)
-        
-        self.scrollView.delegate = self
-        self.scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: false)
+        offset = CGPoint(x: self.view.frame.width, y: 0)
         
         if !notInitial {
             imageSets = preSet
@@ -397,6 +402,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             performSegue(withIdentifier: "tutorial", sender: self)
             isTutorialShown = true
         }
+        
+        categoryCollectionView.isHidden = false
+        everyCollectionView.isHidden = true
         
         if PHPhotoLibrary.authorizationStatus() != .authorized {
             PHPhotoLibrary.requestAuthorization() { status in
@@ -606,6 +614,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 destMain.setItem = imageSets[indexPath.item - 1]
                 destMain.whatIsIndexPath = indexPath.item - 1
                 destMain.whereFrom = "Every"
+                
+                
+                let dateComponents = Calendar.current.dateComponents([.weekOfYear, .month], from: Date())
+                
+                db.collection("\(experimentID)_usage").addDocument(data: [
+                    "cardname": imageSets[indexPath.item - 1].imageName,
+                    "cardtype": imageSets[indexPath.item - 1].cardType,
+                    "carddata": imageSets[indexPath.item - 1].tagName,
+                    "date": dateFormatter1.string(from: Date()),
+                    "time": dateFormatter2.string(from: Date()),
+                    "weekofyear": String(dateComponents.weekOfYear ?? 0),
+                    "month": String(dateComponents.month ?? 0),
+                    "totrecord": dateFormatter3.string(from: Date())
+                ]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: documentID")
+                    }
+                }
             }
             destMain.whatIsCategory = "모든 카드"
         } else if segue.identifier == "goTypeFromMain" {
@@ -628,20 +656,5 @@ extension UICollectionView {
         let lastItemIndexPath = IndexPath(item: numberOfItems(inSection: lastSection) - 1,
                                           section: lastSection)
         scrollToItem(at: lastItemIndexPath, at: .bottom, animated: true)
-    }
-}
-
-extension ViewController {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageWidth: CGFloat = self.view.frame.width
-        let currentPage: CGFloat = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
-        
-        if Int(currentPage) == 0 {
-            mainSegmentControl.setIndex(0)
-            isAlbum = false
-        } else {
-            mainSegmentControl.setIndex(1)
-            isAlbum = true
-        }
     }
 }

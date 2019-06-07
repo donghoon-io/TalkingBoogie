@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
-import FirebaseStorage
 import FirebaseAuth
+import IQKeyboardManagerSwift
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        let db = Firestore.firestore()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch {
+            // report for an error
+        }
+        
+        IQKeyboardManager.shared.enable = true
         
         var idName: String?
         if Auth.auth().currentUser != nil {

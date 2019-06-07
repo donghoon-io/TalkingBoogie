@@ -129,8 +129,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
             } else {
                 return 12
             }
-        } else if collectionView == suggestionCollectionView {
-            return tempAACArray.count
         } else {
             return allPhotos.count
         }
@@ -164,11 +162,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
                 cell22212.addingImage.image = UIImage(named: "addsymbol")
                 return cell22212
             }
-        } else if collectionView == suggestionCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! SuggestionViewCell
-            cell.suggestionImage.image = loadImage(named: tempAACArray[indexPath.item])
-            
-            return cell
         }
         else {
             let assetCell = collectionView.dequeueReusableCell(withReuseIdentifier: "routineChooseImageViewCell", for: indexPath) as! RoutineChooseViewCell
@@ -188,31 +181,16 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
         if (receivingFrom == "Routine" && selectedImage.count < 10) || (receivingFrom == "Sorted" && selectedImage.count < 12) {
             if collectionView == routineAacCollectionView {
                 selectedImage.append(UIImage(named: aacArray[indexPath.item]) ?? UIImage())
-                selectedString.append("")
-                detectLabelsForAAC(image: UIImage(named: aacArray[indexPath.item]) ?? UIImage()) { (str) in
-                    self.selectedString[self.selectedString.count - 1] = str
-                }
+                selectedString.append(routineAacSearchBar.text ?? "")
             } else if collectionView == routineWebCollectionView {
                 selectedImage.append(webImageArray[indexPath.item])
                 selectedString.append("")
-                detectLabelsForAAC(image: webImageArray[indexPath.item]) { (str) in
-                    self.selectedString[self.selectedString.count - 1] = str
-                }
             } else if collectionView == choosingCollectionView {
-            } else if collectionView == suggestionCollectionView {
-                selectedImage.append(loadImage(named: tempAACArray[indexPath.item]))
-                selectedString.append("")
-                detectLabelsForAAC(image: loadImage(named: tempAACArray[indexPath.item])) { (str) in
-                    self.selectedString[self.selectedString.count - 1] = str
-                }
-                
             } else {
                 getImageFromAsset(asset: allPhotos.object(at: indexPath.item), imageSize: CGSize(width: 500, height: 500)) { (assetImage) in
                     self.selectedImage.append(assetImage)
                     self.selectedString.append("")
-                    self.detectLabelsForAAC(image: assetImage, completion: { (str) in
-                        self.selectedString[self.selectedString.count - 1] = str
-                    })
+                    
                 }
             }
             self.choosingCollectionView.reloadData()
@@ -230,10 +208,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var routineWebSearchBar: UISearchBar!
     @IBOutlet weak var routineEveryLabel: UILabel!
     
-    @IBOutlet weak var suggestionLabel: UILabel!
-    @IBOutlet weak var suggestionCollectionView: UICollectionView!
-    
-    @IBOutlet weak var suggestionCollectionViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var choosingCollectionView: UICollectionView!
     @IBOutlet weak var routineAacCollectionView: UICollectionView!
@@ -249,9 +223,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
         refreshView.delegate = self
         routineWebCollectionView.addPullLoadableView(refreshView, type: .loadMore)
         
-        tempAACArray = suggestAAC(str: titleString)
-        
-        suggestionCollectionView.reloadData()
         
         fetchAllPhotos()
         
@@ -265,8 +236,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
         routineLibraryCollectionView.dataSource = self
         routineAacSearchBar.delegate = self
         routineWebSearchBar.delegate = self
-        suggestionCollectionView.delegate = self
-        suggestionCollectionView.dataSource = self
 
         
         switch currentCollectionViewIndex {
@@ -292,11 +261,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
         let itemWidth1: CGFloat = (self.routineWebCollectionView.frame.size.width - 6)/2
         layout1.itemSize = CGSize(width: itemWidth1, height: itemWidth1)
         
-        let layout15 = self.suggestionCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout15.sectionInset = UIEdgeInsets.init(top: 2,left: 2,bottom: 2,right: 2)
-        layout15.itemSize = CGSize(width: itemWidth1, height: itemWidth1)
-        
-        suggestionCollectionViewHeight.constant = itemWidth1 + 5
         
         
         let layout2 = self.routineLibraryCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -354,8 +318,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
     
     func routineAacLayout() {
         currentCollectionViewIndex = 0
-        suggestionLabel.isHidden = false
-        suggestionCollectionView.isHidden = false
         routineAacSearchBar.isHidden = false
         routineWebSearchBar.isHidden = true
         routineEveryLabel.isHidden = true
@@ -365,8 +327,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
     }
     func routineWebLayout() {
         currentCollectionViewIndex = 1
-        suggestionLabel.isHidden = true
-        suggestionCollectionView.isHidden = true
         routineAacSearchBar.isHidden = true
         routineWebSearchBar.isHidden = false
         routineEveryLabel.isHidden = true
@@ -376,8 +336,6 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
     }
     func routineLibraryLayout() {
         currentCollectionViewIndex = 2
-        suggestionLabel.isHidden = true
-        suggestionCollectionView.isHidden = true
         routineAacSearchBar.isHidden = true
         routineWebSearchBar.isHidden = true
         routineEveryLabel.isHidden = false
@@ -386,9 +344,8 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
         routineLibraryCollectionView.isHidden = false
     }
     
-    lazy var vision = Vision.vision()
     
-    func detectLabelsForAAC(image: UIImage?, completion: @escaping (String) -> Void) {
+    /*func detectLabelsForAAC(image: UIImage?, completion: @escaping (String) -> Void) {
         let options = VisionLabelDetectorOptions(confidenceThreshold: 0.5)
         let labelDetector = vision.labelDetector(options: options)
         let imageConverted = VisionImage(image: image ?? UIImage())
@@ -472,7 +429,7 @@ class ChooseRoutineImageViewController: UIViewController, UICollectionViewDelega
                 task.resume()
             }
         }
-    }
+    }*/
 }
 
 func suggestAAC(str: String) -> [String] {

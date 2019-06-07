@@ -8,7 +8,6 @@
 
 import Foundation
 import Firebase
-import FirebaseDatabase
 import Localize_Swift
 
 
@@ -111,6 +110,15 @@ var viewLayout: String {
         return UserDefaults.standard.string(forKey: "viewLayout") ?? "threebythree"
     } set {
         UserDefaults.standard.set(newValue, forKey: "viewLayout")
+        UserDefaults.standard.synchronize()
+    }
+}
+
+var experimentID: String {
+    get {
+        return UserDefaults.standard.string(forKey: "experimentID") ?? ""
+    } set {
+        UserDefaults.standard.set(newValue, forKey: "experimentID")
         UserDefaults.standard.synchronize()
     }
 }

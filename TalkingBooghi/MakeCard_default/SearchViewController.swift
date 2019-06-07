@@ -69,7 +69,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         searchBar.delegate = self
         
         let layout = self.searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsets.init(top: 10,left: 15,bottom: 10,right: 15)
         layout.minimumInteritemSpacing = 5
         let itemWidth: CGFloat = (self.searchCollectionView.frame.size.width - 50)/2
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)

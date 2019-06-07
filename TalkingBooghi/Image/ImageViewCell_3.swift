@@ -76,8 +76,10 @@ class ImageViewCell_3: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage1.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel1.textColor = .black
+                    self.tagImage1.layer.borderWidth = 2
+                    self.tagImage1.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         } else {
@@ -89,8 +91,10 @@ class ImageViewCell_3: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage1.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel1.textColor = .black
+                    self.tagImage1.layer.borderWidth = 2
+                    self.tagImage1.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         }
@@ -119,8 +123,10 @@ class ImageViewCell_3: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage2.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel2.textColor = .black
+                    self.tagImage2.layer.borderWidth = 2
+                    self.tagImage2.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         } else {
@@ -132,8 +138,10 @@ class ImageViewCell_3: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage2.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel2.textColor = .black
+                    self.tagImage2.layer.borderWidth = 2
+                    self.tagImage2.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         }
@@ -162,8 +170,10 @@ class ImageViewCell_3: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage3.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel3.textColor = .black
+                    self.tagImage3.layer.borderWidth = 2
+                    self.tagImage3.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         } else {
@@ -175,8 +185,10 @@ class ImageViewCell_3: UICollectionViewCell {
                     charCount += 1
                 } else {
                     timer.invalidate()
-                    self.tagImage3.layer.borderColor = UIColor.clear.cgColor
+                    
                     self.tagLabel3.textColor = .black
+                    self.tagImage3.layer.borderWidth = 2
+                    self.tagImage3.layer.borderColor = UIColor.lightGray.cgColor
                 }
             })
         }

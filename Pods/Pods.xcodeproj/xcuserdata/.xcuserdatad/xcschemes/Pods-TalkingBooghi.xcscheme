@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "383273A3D60344E854CC300023C15505"
+               BlueprintIdentifier = "8844459AC80F493074CD8F777F27828B"
                BlueprintName = "Pods-TalkingBooghi"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-TalkingBooghi.framework">

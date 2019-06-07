@@ -8,9 +8,16 @@
 
 import UIKit
 import Localize_Swift
-
+import Firebase
 
 class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, goToMakeCard {
+    
+    var db: Firestore!
+    
+    let dateFormatter1: DateFormatter = DateFormatter()
+    let dateFormatter2: DateFormatter = DateFormatter()
+    let dateFormatter3: DateFormatter = DateFormatter()
+    
     func goMake(titleName: String, type: String) {
         titleString = titleName
         switch type {
@@ -138,7 +145,13 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         self.navigationController?.isToolbarHidden = true
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-       
+        
+        db = Firestore.firestore()
+        
+        dateFormatter1.dateFormat = "yyyy-MM-dd"
+        dateFormatter2.dateFormat = "HH:mm:ss"
+        dateFormatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
         switch viewLayout {
         case "threebythree":
             threebythreeLayoutAlbum()
@@ -147,8 +160,6 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         default:
             twobytwoLayoutAlbum()
         }
-        
-        
         
         title = titleString
         
@@ -188,7 +199,7 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
                 if let tempImage = loadMainImage(named: imgSet.imagePath + "main") {
                     cell2.itemImage.image = tempImage
                 } else {
-                    let img = sortedImageGenerator(imgSet: imgSet)
+                    let img = routineImageGenerator(imgSet: imgSet)
                     saveDocumentImage(img: img, imgPath: imgSet.imagePath+"main")
                     cell2.itemImage.image = img
                 }
@@ -196,7 +207,7 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
                 if let tempImage = loadMainImage(named: imgSet.imagePath + "main") {
                     cell2.itemImage.image = tempImage
                 } else {
-                    let img = routineImageGenerator(imgSet: imgSet)
+                    let img = sortedImageGenerator(imgSet: imgSet)
                     saveDocumentImage(img: img, imgPath: imgSet.imagePath+"main")
                     cell2.itemImage.image = img
                 }
@@ -228,6 +239,27 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
             let cell2 = collectionView.cellForItem(at: indexPath) as! ItemsViewCell
             self.currentIndexPath = indexPath.item - 1
             performSegue(withIdentifier: "goBelow", sender: cell2)
+            
+            let dateComponents = Calendar.current.dateComponents([.weekOfYear, .month], from: Date())
+            
+            let currentImageSet = setCategoryArray(Array: imageSets, CategoryName: self.titleString)[self.currentIndexPath]
+            
+            db.collection("\(experimentID)_usage").addDocument(data: [
+                "cardname": currentImageSet.imageName,
+                "cardtype": currentImageSet.cardType,
+                "carddata": currentImageSet.tagName,
+                "date": dateFormatter1.string(from: Date()),
+                "time": dateFormatter2.string(from: Date()),
+                "weekofyear": String(dateComponents.weekOfYear ?? 0),
+                "month": String(dateComponents.month ?? 0),
+                "totrecord": dateFormatter3.string(from: Date())
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: documentID")
+                }
+            }
         }
     }
     
@@ -238,6 +270,8 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
             thirdController.whatIsCategory = self.titleString
             thirdController.whatIsIndexPath = self.currentIndexPath
             thirdController.whereFrom = "Album"
+            
+            
         } else if segue.identifier == "setType" {
             let prepareController = segue.destination as! CardSelectionViewController
             prepareController.whatIsTitleText = self.titleString
