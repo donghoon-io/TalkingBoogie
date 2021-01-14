@@ -1,5 +1,7 @@
 ## TalkingBoogie-AAC
 
+![Logo](https://dl.acm.org/cms/asset/ed7b85d4-e1dc-476f-b162-383d13a4021f/3313831.3376154.key.jpg)
+
 TalkingBoogie-AAC is an iOS-based AAC (augmentative and alternative communication) application that helps non-verbal children with developmental disabilities. This is a pure grid-based AAC system within TalkingBoogie system, which is published as [CHI'20 paper](https://dl.acm.org/doi/abs/10.1145/3313831.3376154). A released version of TalkingBoogie is available on the [App Store](https://apps.apple.com/app/id1435744898).
 
 ### Installation
