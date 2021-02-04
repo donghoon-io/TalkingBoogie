@@ -9,7 +9,7 @@ TalkingBoogie-AAC is an iOS-based AAC (augmentative and alternative communicatio
 Make sure your environment satisfies Xcode 10.2 & Swift 4.0. This application is targeted to iOS >=11.0.
 
 1. Clone repository
-2. Install dependencies with `pod install` using [Cocoapods](https://cocoapods.org/)
+2. Install dependencies with `pod install` using [CocoaPods](https://cocoapods.org/)
 3. Build using Xcode
 
 ### References
