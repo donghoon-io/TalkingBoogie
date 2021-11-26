@@ -1,6 +1,6 @@
 ## TalkingBoogie-AAC
 
-[![DOI:10.1145/3313831.3376154](https://zenodo.org/badge/DOI/10.1145/3313831.3376154.svg)](https://doi.org/10.1145/3313831.3376154)
+[![DOI:10.1145/3313831.3376154](https://badgen.net/badge/DOI/10.1145%2F3313831.3376154/blue)](https://doi.org/10.1145/3313831.3376154)
 
 ![Logo](https://dl.acm.org/cms/asset/ed7b85d4-e1dc-476f-b162-383d13a4021f/3313831.3376154.key.jpg)
 
